@@ -1,0 +1,7 @@
+# PaddleOCR 边车服务依赖。版本钉死，避免默认模型悄悄变了。
+# 注意：paddlepaddle 较大，首次安装需要几分钟；有 GPU 可换成 paddlepaddle-gpu。
+paddleocr==3.7.0
+paddlepaddle
+fastapi
+uvicorn
+python-multipart

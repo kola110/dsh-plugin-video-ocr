@@ -1,0 +1,5 @@
+# 把下面路径里的 <ABSOLUTE_PATH_TO_THIS_DIR> 换成这个插件目录在本机的绝对路径，
+# 例如 /Users/you/projects/video-ocr-plugin
+- insert:
+    - id: video-ocr
+      name: '<ABSOLUTE_PATH_TO_THIS_DIR>/src/video-ocr-plugin.ts'
