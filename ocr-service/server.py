@@ -1,7 +1,8 @@
 """PaddleOCR 边车服务：给 dsh video_ocr 插件提供 OCR 能力。
 
-启动：
-    pip install -r requirements.txt
+启动（conda 环境，见同目录 environment.yml）：
+    conda env create -f environment.yml
+    conda activate video-ocr
     python server.py
 默认监听 http://127.0.0.1:8000 ，插件通过 OCR_SERVICE_URL 环境变量找到它。
 

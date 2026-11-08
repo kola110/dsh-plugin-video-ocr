@@ -1,0 +1,19 @@
+# PaddleOCR 边车服务的 conda 环境。
+# 用法：
+#   conda env create -f environment.yml
+#   conda activate video-ocr
+#   python server.py
+# 说明：fastapi/uvicorn 走 conda-forge；paddleocr 和 paddlepaddle
+# 没有稳定的 conda-forge 包，用环境里的 pip 装（仍在 conda 环境内运行）。
+name: video-ocr
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - fastapi
+  - uvicorn
+  - python-multipart
+  - pip
+  - pip:
+      - paddleocr==3.7.0
+      - paddlepaddle

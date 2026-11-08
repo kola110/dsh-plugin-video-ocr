@@ -22,12 +22,20 @@ DeepSeek Harness（dsh）的通用视频 OCR 工具插件。
 
 ## 在 dsh 里跑起来
 
-先启动 OCR 边车服务（新开一个终端）：
+先启动 OCR 边车服务（新开一个终端）。边车服务用 conda 环境运行：
 
 ```sh
 cd video-ocr-plugin/ocr-service
-pip install -r requirements.txt   # 首次安装需要几分钟，paddlepaddle 体积较大
-python server.py                  # 监听 http://127.0.0.1:8000
+conda env create -f environment.yml   # 只需做一次；paddlepaddle 体积较大，首次安装需要几分钟
+conda activate video-ocr
+python server.py                      # 监听 http://127.0.0.1:8000
+```
+
+以后每次启动边车只需：
+
+```sh
+conda activate video-ocr
+python server.py
 ```
 
 确认边车在跑（打开 http://127.0.0.1:8000/health 应返回 `{"status":"ok"}`），再启动 dsh：
